@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSS Image Gallery</title>
+    <style>
+        /* Reset default browser margin and padding */
+        * {
+            margin: 0;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        /* Gallery container styling */
+        .gallery {
+            display: grid; /* Creates a grid layout */
+            grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+            /* Above means: Create as many columns as fit, each min 250px wide */
+            gap: 10px; /* Space between images */
+            padding: 20px;
+            background-color: #121010;
+        }
+ 
+        /* Image styling */
+        .gallery img {
+            width: 100%; /* Image fills the grid cell */
+            height: 200px; /* Fixed height for uniform look */
+            object-fit: cover; /* Crops image to fit without distortion */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Soft shadow */
+            transition: transform 0.3s; /* Smooth zoom effect */
+        }
+
+        /* Zoom effect on hover */
+        .gallery img:hover {
+            transform: scale(1.05); /* Slight zoom */
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align:center; padding: 20px;">My CSS Image Gallery</h1>
+
+    <div class="gallery">
+        <img src="https://feeds.abplive.com/onecms/images/uploaded-images/2021/07/10/273e787ba809e725948334340c658e68_original.jpg?impolicy=abp_images&imwidth=1200" alt="Image 1">
+        <img src="https://wallpaperaccess.com/full/8406527.jpg" alt="Image 2">
+        <img src="https://pbs.twimg.com/profile_images/1567921872737808386/XsQs-oD-_400x400.jpg" alt="Image 3">
+        <img src="https://assets.gadgets360cdn.com/pricee/assets/product/202303/Leo_1678967552.jpg" alt="Image 4">
+       
+    </div>
+
+</body>
+</html>
